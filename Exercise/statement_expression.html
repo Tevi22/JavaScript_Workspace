@@ -54,7 +54,41 @@
                     Calculate total cost by applying discounts of 5, 7, 9, 11 percent, and so on for customer 1,2,3 and 4.
                     Try the code with different values for the number of seats.
                 */
-                
+                let ticketprice = 9;
+                let seats = 4;
+                let regularPrice = seats * ticketprice;
+
+                if (seats == 1) {
+                    total = seats * ticketprice;
+                    discount = .05 * total;
+                    totalDis = total - discount;
+                    document.write('<br>Ticket for Customer 1 gets 5% discount!, Cost is: ' + '$'+totalDis)
+
+                } else if (seats == 2) {
+                    total = seats * ticketprice;
+                    discount = .07 * total;
+                    totalDis = total - discount
+                    pricePerTicket = totalDis / seats;
+                    document.write('<br>Ticket for Customer 2 gets 7% discount!, Cost is: '  + '$'+pricePerTicket)
+
+
+                } else if (seats == 3) {
+                    total = seats * ticketprice;
+                    discount = .09 * total;
+                    totalDis = total - discount
+                    pricePerTicket = totalDis / seats;
+                    document.write('<br>Ticket for Customer 3 gets 9% discount!, Cost is: ' + '$'+pricePerTicket)
+
+                } else if (seats == 4) {
+                    total = seats * ticketprice;
+                    discount = .11 * total;
+                    totalDis = total - discount
+                    pricePerTicket = totalDis / seats;
+                    document.write('<br>Ticket for Customer 4 gets 11% discount!, Cost is: ' + '$'+pricePerTicket)
+                    document.write('<br>For 4 tickets, you need to pay: ' + '$'+totalDis + ' instead of ' + '$'+regularPrice)
+                } else {
+                    document.write('<br>Booking is not allowed')
+                }
             </script>
         </div>
     </center>
