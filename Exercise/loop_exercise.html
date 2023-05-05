@@ -42,6 +42,39 @@
             <br>
             <script>
                 //Write the code to display the ticket details
+                let ticketprice = 9;
+                for (seat=1;seat<5;seat++){
+                    if (seat<=1){
+                        total= seat * ticketprice;
+                        discount = .05 * total;
+                        totalprice = total-discount;
+                        document.write('<br> Ticket for Customer 1 gets 5% discount!, Cost is: '+'$'+totalprice);
+                    } else if(seat==2){
+                        total = seat * ticketprice
+                        discount=.07 * total;
+                        totalprice =  total-discount;
+                        PricePerTicket = totalprice/seat;
+                        document.write('<br> Ticket for Customer 2 gets 7% discount!, Cost is: '+'$'+PricePerTicket);
+                    }else if (seat==3){
+                        total = seat * ticketprice
+                        discount=.09 * total;
+                        totalprice = total-discount;
+                        PricePerTicket = totalprice/seat;
+                        document.write('<br> Ticket for Customer 3 gets 9% discount!, Cost is: '+'$'+PricePerTicket);
+
+                    }else if(seat==4){
+                        total = seat * ticketprice
+                        discount = .11 * total;
+                        totalprice = total-discount;
+                        PricePerTicket = totalprice/seat;
+                        regularprice = seat * ticketprice;
+                        document.write('<br> Ticket for Customer 4 gets 11% discount!, Cost is: '+'$'+PricePerTicket);
+                        document.write('<br> For 4 tickets, you need to pay: '+'$'+ totalprice+ ' instead '+'$'+regularprice )
+                    } else{
+                        document.write('<br> Booking not allowed!')
+                    }
+
+                }
             </script>
         </div>
     </center>
