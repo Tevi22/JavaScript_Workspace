@@ -53,36 +53,36 @@
                     if (seat < 5) {
                         return seat * ticketprice
                     } else{
-                        return doument.write("Booking not allowed")
+                        return "Booking not allowed"
                     }
                     
                 }
 
                 let calculateDiscount = function (seat) {
+                    dis1 = .05
+                    dis2 = .07
+                    dis3 = .09
+                    dis4 = .11
                     if (seat == 1) {
                         total = seat * ticketprice
                         discount = .05 * total
                         totalDis = total- discount
-                        pricePerTicket = totalDis / seat
-                        return pricePerTicket
+                        return totalDis
                     } else if (seat == 2){
                         total = seat * ticketprice
-                        discount = .07 * total
+                        discount = dis1 + dis2 * total
                         totalDis = total - discount
-                        pricePerTicket = totalDis / seat
-                        return pricePerTicket
+                        return totalDis
                     } else if (seat == 3){
                         total = seat * ticketprice
-                        discount = .09 * total
+                        discount = dis1 + dis2 + dis3 * total
                         totalDis = total - discount
-                        pricePerTicket = totalDis / seat
-                        return pricePerTicket
+                        return totalDis
                     } else if (seat == 4) {
                         total = seat * ticketprice
-                        discount = .11 * total
+                        discount = dis4 * total
                         totalDis = total - discount
-                        pricePerTicket = totalDis / seat
-                        return pricePerTicket
+                        return totalDis
                     } else {
                         return "Booking not allowed";
                     }
@@ -90,7 +90,7 @@
 
                 }
                 
-                document.write("<br><br> Amount Payable: "+"$"+calculateDiscount(4))
+                document.write("<br><br> Amount Payable: "+"$"+calculateDiscount(4)+ " Instead of regular price: "+"$"+calculateCost(4))
             </script>
         </div>
     </center>
