@@ -32,7 +32,7 @@
         }
     </style>
 </head>
- 
+
 <body>
     <center>
         <div id="heading">
@@ -41,9 +41,59 @@
         <div id="maincontent">
             <script>
                 //Write the code to display the booking summary
+                ticketprice = 9;
+                
+                document.write('Actual cost per ticket: '+'$'+ticketprice)
+                document.write('<br><br>4 seats are eligible for festive discount!!')
+                document.write("<br><br> 5% discount! on Ticket 1")
+                document.write("<br> 7% discount! on Ticket 2")
+                document.write("<br> 9% discount! on Ticket 3")
+                document.write("<br> 11% discount! on Ticket 4")
+                function calculateCost(seat) {
+                    if (seat < 5) {
+                        return seat * ticketprice
+                    } else{
+                        return doument.write("Booking not allowed")
+                    }
+                    
+                }
+
+                let calculateDiscount = function (seat) {
+                    if (seat == 1) {
+                        total = seat * ticketprice
+                        discount = .05 * total
+                        totalDis = total- discount
+                        pricePerTicket = totalDis / seat
+                        return pricePerTicket
+                    } else if (seat == 2){
+                        total = seat * ticketprice
+                        discount = .07 * total
+                        totalDis = total - discount
+                        pricePerTicket = totalDis / seat
+                        return pricePerTicket
+                    } else if (seat == 3){
+                        total = seat * ticketprice
+                        discount = .09 * total
+                        totalDis = total - discount
+                        pricePerTicket = totalDis / seat
+                        return pricePerTicket
+                    } else if (seat == 4) {
+                        total = seat * ticketprice
+                        discount = .11 * total
+                        totalDis = total - discount
+                        pricePerTicket = totalDis / seat
+                        return pricePerTicket
+                    } else {
+                        return "Booking not allowed";
+                    }
+                    
+
+                }
+                
+                document.write("<br><br> Amount Payable: "+"$"+calculateDiscount(4))
             </script>
         </div>
     </center>
 </body>
- 
+
 </html>
