@@ -62,19 +62,17 @@
                     total = seat * ticketprice;
                     discount = dis * total;
                     totalDis = total- discount;
-                    alert("Amount payable after discount is. "+"$"+totalDis);
+                    return totalDis;
                 } else {
-                    alert("Booking not allowed");
+                    return "Booking not allowed";
                 }
-                
-
             }
 
             document.write('Cost per ticket is: '+'$'+ticketprice)
             document.write('<br>Total cost: '+'$'+calculateCost(4))
-            document.write()
+
         </script>
-        <p>Congratulations! 4 seats are eligible for discount. <a href="#" onclick="calculateDis(4,.11);">Apply</a></p>
+        <p>Congratulations! 4 seats are eligible for discount. <a href="#" onclick="alert('Amount payable after discount is. '+'$'+calculateDis(4,.11));">Apply</a></p>
     </div>
 </body>
 
