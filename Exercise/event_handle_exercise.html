@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Booking Details</title>
+    <style>
+        div#maincontent {
+            height: 100px;
+            width: 500px;
+            border: 1px solid #CEE2FA;
+            text-align: left;
+            color: #08438E;
+            font-family: calibri;
+            font-size: 20;
+            padding: 5px;
+            margin-left: 10px;
+        }
+
+        div#heading {
+            text-decoration: bold;
+            text-align: center;
+            margin-top: 40px;
+            margin-left: 10px;
+            width: 500px;
+            border: 1px solid #CEE2FA;
+            text-align: center;
+            color: #08438E;
+            background-color: #CEE2FA;
+            font-family: calibri;
+            font-size: 20;
+            padding: 5px;
+        }
+
+        h2 {
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div id="heading">
+         <h2>Booking Summary</h2>
+    </div>
+    <div id="maincontent">
+        <script>
+            //Write the code to display the discounted price on click of the text
+            ticketprice = 9;
+
+            function calculateCost(seat) {
+                if (seat < 5) {
+                    return seat * ticketprice
+                } else{
+                    return "Booking not allowed"
+                }
+                
+            }
+
+            function calculateDis(seat, dis) {
+                if (seat < 5 && dis <=.11) {
+                    total = seat * ticketprice;
+                    discount = dis * total;
+                    totalDis = total- discount;
+                    alert("Amount payable after discount is. "+"$"+totalDis);
+                } else {
+                    alert("Booking not allowed");
+                }
+                
+
+            }
+
+            document.write('Cost per ticket is: '+'$'+ticketprice)
+            document.write('<br>Total cost: '+'$'+calculateCost(4))
+            document.write()
+        </script>
+        <p>Congratulations! 4 seats are eligible for discount. <a href="#" onclick="calculateDis(4,.11);">Apply</a></p>
+    </div>
+</body>
+
+
+</html>
