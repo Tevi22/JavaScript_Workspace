@@ -2,6 +2,17 @@
 <html>
 <head>
     <title>DOM API for HTML modification</title>
+    <style>
+        .bg-eat {
+            background-color: lightgreen;
+            text-align: center;
+        }
+
+        .bg-refill {
+            background-color: lightblue;
+            text-align: center;
+        }
+    </style>
 </head>
 <body style="background-color:lightblue;text-align:center">
     <h1 id="hdr1">Here's your ice cream</h1>
@@ -9,6 +20,23 @@
     <p id="p1" onclick="eat()">Click here to eat</p>
     <script>
         //Write the code here
+        function ate() {
+            document.body.style.backgroundColor = 'lightgreen'
+            document.getElementById("hdr1").innerHTML = "Hope you liked it";
+            document.getElementById("img1").src = "images/empty-cone.jpg"
+        }
+
+        function refill() { 
+            document.body.style.backgroundColor = 'lightblue'
+            document.getElementById("hdr1").innerHTML = "Here's a refilled cone";
+            document.getElementById("img1").src = "images/full-cone.jpg"
+
+        }
+
+        function eat() {
+            ate();
+            refill();
+        }
     </script>
 </body>
 </html>
