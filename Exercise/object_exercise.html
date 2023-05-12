@@ -12,31 +12,41 @@
             background-color: lightblue;
             text-align: center;
         }
+
+        .p1 {
+
+        }
     </style>
 </head>
 <body style="background-color:lightblue;text-align:center">
     <h1 id="hdr1">Here's your ice cream</h1>
     <img id="img1" src="images/full-cone.jpg" alt="Ice cream is not ready">
-    <p id="p1" onclick="eat()">Click here to eat</p>
+    <p id="p1" onmousedown="eat()" onmouseup="refill()">Click here to eat</p>
     <script>
         //Write the code here
-        function ate() {
-            document.body.style.backgroundColor = 'lightgreen'
-            document.getElementById("hdr1").innerHTML = "Hope you liked it";
-            document.getElementById("img1").src = "images/empty-cone.jpg"
+        //defining custom function
+        function eat() {
+            document.body.style.backgroundColor = 'lightgreen';
+            document.getElementById("hdr1").innerHTML = "Hope you liked it!";
+            document.getElementById("img1").src = "images/empty-cone.jpg";
+            document.getElementById("p1").innerHTML = "Click to Re-fill!";
         }
+
 
         function refill() { 
-            document.body.style.backgroundColor = 'lightblue'
-            document.getElementById("hdr1").innerHTML = "Here's a refilled cone";
-            document.getElementById("img1").src = "images/full-cone.jpg"
+            document.body.style.backgroundColor = 'lightblue';
+            document.getElementById("hdr1").innerHTML = "Here's a refilled cone!";
+            document.getElementById("img1").src = "images/full-cone.jpg";
+            document.getElementById("p1").innerHTML = "Enjoy yourself!";
 
         }
 
-        function eat() {
-            ate();
-            refill();
-        }
+        
+
+
+        
+
+        
     </script>
 </body>
 </html>
