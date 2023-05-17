@@ -10,50 +10,22 @@
 */
 // Creating object to return random number
 
-function randomNum() {
+function randomNum () {
   const num = Math.floor(Math.random() * 100)
-  return new Promise((resolve,reject) => {
-    let myInterval = setInterval(randomNum,3000); {
-      for (let i = 0; i<5; i++) {
-        resolve(console.log("Stock price is: "+"$"+num))
+  const interval = window.setInterval(() => {
+  }, 3000)
+  return new Promise((resolve, reject) => {
+    for (let i = 0; i < 5; i++) {
+      if (i < 5) {
+        resolve('The Stock price is: ' + '$' + num)
         i++
-        if (i >= 5) {
-          reject("Reject: Error")
-        }
+      } else {
+        Promise.reject(new Error('Error'))
+        clearInterval(interval)
+        break
       }
-    }
+    };
   })
 }
 
 console.log(randomNum())
-
-
-// Task #2
-let counter = 0
-
-let timer = setInterval(randomNum(), 3000); {
- for (let i = 0; i<5; i++){
-  console.log("Stock price is: "+"$"+randomNum())
-  i++
-  if (i >= 5) {
-    clearInterval(timer)
-  }
- }
-}
-
-var myPromise = new Promise(randomNum (resolve, reject),3000), {
-    setInterval(randomNum ()); {
-      resolve("success")
-    };
-};
-myPromise.then{
-  randomNum (data) {
-    console.log(data + " received in 3 seconds");
-  },
-  randomNum (error) {
-    console.log(error)
-  }
-};
-
-console.log("Stock price is: "+"$"+randomNum())
-
