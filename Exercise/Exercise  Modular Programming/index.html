@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title></title>
-        <script></script>
-    </head>
-    <body>
-        <!--
+
+<head>
+    <title>MeBook</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script type="module" src="./index.js"></script>
+</head>
+
+<body>
+    <!--
     1. Create an index.html file with textboxes username and password and a submit button.
     2. Add a script tag in HTML to include index.js file.
         -->
-        <div></div>
-    </body>
+    <h3>MeBook</h3>
+    <div>
+        <form onsubmit="return validate">
+            <input class="username" type="text" name="name" placeholder="Name" required>
+            <input class="password" type="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Submit">
+            <h4>Login</h4>
+            <a href="#">Forgot password?</a>
+            <h6>or</h6>
+            <h5>Create an Account</h5>
+
+        </form>
+    </div>
+</body>
+
 </html>

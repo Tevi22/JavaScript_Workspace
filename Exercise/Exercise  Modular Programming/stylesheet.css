@@ -1,0 +1,40 @@
+Body {
+    background-color: blue;
+    
+}
+
+h3 {
+    color: white;
+    text-align: center;
+}
+
+div{
+    background-color: white;
+    height: 400px;
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    box-shadow: 10px 20px 30px black ;
+}
+
+input {
+    margin:30px 10px 0px 10px;
+}
+
+h4 {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid;
+    background-color: blue;
+}
+
+h5 {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid;
+}
+
+h6 {
+    text-decoration: underline;
+    color: gray;
+}
