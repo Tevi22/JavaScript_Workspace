@@ -23,7 +23,7 @@
     </header>
     <main>
         <h2>Login</h2>
-        <form>
+        <form onsubmit="return function loginCredent(names, pass)">
             <div>
                 <label for="uname">Username:</label>
                 <input type="text" id="uname" required>
@@ -34,7 +34,7 @@
             </div>
             <br>
             <div>
-                <input type="button" value="Login" >
+                <input type="submit"  value="Login">
             </div>
             <br><br>
         </form>
