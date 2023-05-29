@@ -1,89 +1,100 @@
-// Assign json to object
 
-let users;
+document.addEventListener('DOMContentLoaded', function () {
+    // Assign json to object
 
-// fetch name, username, and password from json file
+    let users;
 
-fetch('/Capstone Project/automobmechanic-app/js/users.json')
-    .then(response => response.json())
-    .then(data => {
-        users = data
-        console.log(users)
-        validateUserInput()
-    })
-    .catch(error => {
-        console.log('An error occured:', error);
-    });
+    // fetch name, username, and password from json file
 
-// Object to hold user input
-
-const formData = {
-    username: '',
-    password: ''
-}
-
-// Function to store username and password in formData Object
-
-function handleSubmit(event) {
-    event.preventDefault();
-
-    const usernameInput = document.getElementById('uname').value;
-    const passwordInput = document.getElementById('pwd').value;
-
-    formData.username = usernameInput;
-    formData.password = passwordInput;
-}
-
-// Add event listener to form
-
-document.getElementById('myForm').addEventListener('submit', function (event) {
-    event.preventDefault();
-
-    handleSubmit()
-});
-
-// Function to validate if user input match username/password in json file
-
-function validateUserInput() {
-
-    // Varables for DOM based on User role
-    const service = document.getElementById('service');
-    const booking = document.getElementById('booking');
-    const reporting = document.getElementById('reports');
+    fetch('/Capstone Project/automobmechanic-app/js/users.json')
+        .then(response => response.json())
+        .then(data => {
+            users = data
+            console.log(users)
+            validateUserInput();
+        })
+        .catch(error => {
+            console.log('An error occured:', error);
+        });
 
 
-    if (users) {
-        switch (true) {
-            // Checks if user role is admin
-            case formData.username === users[0].username && formData.password === users[0].password:
-                sessionStorage.setItem('username', formData.username);
-                sessionStorage.setItem('password', formData.password);
-                alert('Logged in successfully');
-                location.assign('../html/home.html');
-                // Removes following elements from navbar on homepage
-                service.remove();
-                booking.remove();
-                break;
-            case formData.username === users.username && formData.password === users.password:
-                // checks for all other users in json file
-                sessionStorage.setItem('username', formData.username);
-                sessionStorage.setItem('password', formData.password);
-                alert('Logged in successfully');
-                location.assign('../html/home.html');
-                // Removes following elements from navbar on homepage
-                reporting.remove();
-                break;
-            default:
-                // If the userinput does not match any users in json file
-                alert('Invalid credentials: Please Try Again');
-        }
+    // Object to hold user input
+
+    const formData = {
+        username: '',
+        password: ''
     }
-}
 
-// add event listener to form submit button to validate user
+    // Add event listener to form
 
-document.getElementById('btn').addEventListener('click', function (event) {
-    event.preventDefault();
+    document.getElementById('myForm').addEventListener('submit', handleSubmit);
 
-    validateUserInput();
-})
+    // Function to store username and password in formData Object
+
+    function handleSubmit(event) {
+        event.preventDefault();
+
+        const usernameInput = document.getElementById('uname').value;
+        const passwordInput = document.getElementById('pwd').value;
+
+        // check if either username or password is empty
+        if (!usernameInput || !passwordInput) {
+            alert('Please enter both username and password');
+            return;
+        }
+        formData.username = usernameInput;
+        formData.password = passwordInput;
+
+        validateUserInput();
+    }
+
+    // Function to validate if user input match username/password in json file
+
+    function validateUserInput() {
+
+        // varibles for DOM navbar layout based on users
+
+
+        if (!users) {
+            console.log('Users data is not available');
+            return;
+        }
+
+        if (users) {
+            const matchedUser = users.find(
+                user => user.username === formData.username && user.password === formData.password
+            );
+
+            if (matchedUser) {
+                sessionStorage.setItem('username', formData.username);
+                sessionStorage.setItem('password', formData.password);
+                alert('Logged in successfully');
+                location.assign('../html/home.html');
+
+                // Check for user-specific elements to remove from the navbar
+
+                switch (matchedUser.username) {
+                    case 'admin':
+                        
+                        break;
+                    case 'alex':
+                    case 'johnson':
+                    case 'chris':
+                    case 'eliza':
+                    case 'mary':
+                        
+                        break;
+                    // Add additional cases as needed for other users
+                    default:
+                        break;
+                }
+            } else {
+                // If the user input does not match any users in the json file
+                alert('Invalid credentials: Please Try Again');
+            }
+        }
+
+    }
+    // add event listener to form submit button to validate user
+    document.getElementById('btn').addEventListener('click', handleSubmit);
+});
