@@ -1,7 +1,4 @@
-a{
-    text-decoration: none;
-    color:white;
-}
+
 
 .active{
     border-bottom: 2px solid white;
@@ -40,12 +37,26 @@ footer{
 header{
     background-color: cornflowerblue;
     color:white;
-    height:30px;
+    height:40px;
     padding:10px;
 }
 
-nav{
+nav ul {
     display: inline-block;
-    float:right;
+    list-style-type: none;
+    float: right;
+    margin: 0;
+    padding: 0;
 }
+
+li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
 

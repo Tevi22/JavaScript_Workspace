@@ -2,31 +2,37 @@
     {
         "name": "Admin",
         "username": "admin",
-        "password": "admin@123"
+        "password": "admin@123",
+        "role": "admin"
     },
     {
         "name": "Alex Joy",
         "username": "alex",
-        "password": "alex@123"
+        "password": "alex@123",
+        "role": "other"
     },
     {
         "name": "Johnson Antony",
         "username": "johnson",
-        "password": "john123!"
+        "password": "john123!",
+        "role": "other"
     },
     {
         "name": "Chris Jacob",
         "username": "chris",
-        "password": "chris1234"
+        "password": "chris1234",
+        "role": "other"
     },
     {
         "name": "Eliza Fernandez",
         "username": "eliza",
-        "password": "eliza_123"
+        "password": "eliza_123",
+        "role": "other"
     },
     {
         "name": "Mary S",
         "username": "mary",
-        "password": "mary@1234"
+        "password": "mary@1234",
+        "role": "other"
     }
 ]
