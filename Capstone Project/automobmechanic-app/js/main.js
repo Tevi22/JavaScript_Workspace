@@ -54,6 +54,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // varibles for DOM navbar layout based on users
 
+        const service = document.getElementById('services')
+        const book = document.getElementById('booking')
+        const report = document.getElementById('reporting')
+
 
         if (!users) {
             console.log('Users data is not available');
@@ -70,24 +74,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 sessionStorage.setItem('password', formData.password);
                 alert('Logged in successfully');
                 location.assign('../html/home.html');
-
-                // Check for user-specific elements to remove from the navbar
-
-                switch (matchedUser.username) {
-                    case 'admin':
-                        
-                        break;
-                    case 'alex':
-                    case 'johnson':
-                    case 'chris':
-                    case 'eliza':
-                    case 'mary':
-                        
-                        break;
-                    // Add additional cases as needed for other users
-                    default:
-                        break;
-                }
             } else {
                 // If the user input does not match any users in the json file
                 alert('Invalid credentials: Please Try Again');
@@ -98,3 +84,46 @@ document.addEventListener('DOMContentLoaded', function () {
     // add event listener to form submit button to validate user
     document.getElementById('btn').addEventListener('click', handleSubmit);
 });
+
+// DOM manipulation function
+
+function changeElement(event) {
+    event.preventDefault()
+    // Get user input from the input field
+    let userInput = document.getElementById('uname').value;
+    // Get elements to be maniplated
+    let report = document.getElementById('reporting').parentElement;
+    let service = document.getElementById('services').parentElement;
+    let book = document.getElementById('booking').parentElement;
+
+    if (userInput) {
+        // Check for user-specific elements to remove from the navbar
+        // Display user name in nave bar when logged in 
+        switch (userInput.value) {
+            case 'admin':
+                // Remove elements from nave bar
+                service.style.display = 'none';
+                book.style.display = 'none';
+                // Change the text of the output element
+                document.getElementById('name').innerHTML = 'Hi' + userInput;
+                break;
+            case 'alex':
+            case 'johnson':
+            case 'chris':
+            case 'eliza':
+            case 'mary':
+                // Remove elements from nave bar
+                report.style.display = 'none';
+                // Change the text of the output element
+                document.getElementById('name').innerHTML = 'Hi' + userInput;
+                break;
+            // Add additional cases as needed for other users
+            default:
+                break;
+        }
+
+    }
+}
+
+// add event listener to form submit button to validate user
+document.getElementById('name').addEventListener('li', changeElement);
