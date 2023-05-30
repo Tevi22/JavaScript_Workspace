@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function () {
     // Assign json to object
 
@@ -83,47 +82,54 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     // add event listener to form submit button to validate user
     document.getElementById('btn').addEventListener('click', handleSubmit);
+    document.getElementById('btn').removeEventListener('click', handleSubmit);
 });
 
 // DOM manipulation function
-
-function changeElement(event) {
-    event.preventDefault()
-    // Get user input from the input field
-    let userInput = document.getElementById('uname').value;
-    // Get elements to be maniplated
-    let report = document.getElementById('reporting').parentElement;
-    let service = document.getElementById('services').parentElement;
-    let book = document.getElementById('booking').parentElement;
-
-    if (userInput) {
-        // Check for user-specific elements to remove from the navbar
-        // Display user name in nave bar when logged in 
-        switch (userInput.value) {
-            case 'admin':
-                // Remove elements from nave bar
-                service.style.display = 'none';
-                book.style.display = 'none';
-                // Change the text of the output element
-                document.getElementById('name').innerHTML = 'Hi' + userInput;
-                break;
-            case 'alex':
-            case 'johnson':
-            case 'chris':
-            case 'eliza':
-            case 'mary':
-                // Remove elements from nave bar
-                report.style.display = 'none';
-                // Change the text of the output element
-                document.getElementById('name').innerHTML = 'Hi' + userInput;
-                break;
-            // Add additional cases as needed for other users
-            default:
-                break;
+document.addEventListener('DOMContentLoaded', function () {
+    function changeElement(event) {
+        event.preventDefault()
+        // Get user input from the input field
+        let userInput = document.getElementById('uname').value;
+        // Get elements to be maniplated
+        let report = document.getElementById('reporting');
+        let service = document.getElementById('services');
+        let book = document.getElementById('booking');
+        // Get username
+        let username = document.getElementById('name').innerHTML;
+        let text = 'Hi' + userInput;
+        if (userInput) {
+            // Check for user-specific elements to remove from the navbar
+            // Display user name in nave bar when logged in 
+            switch (userInput.value) {
+                case 'admin':
+                    // Remove elements from nave bar
+                    service.removeChild();
+                    book.removeChild();
+                    // Change the text of the output element
+                     username += text
+                    break;
+                case 'alex':
+                case 'johnson':
+                case 'chris':
+                case 'eliza':
+                case 'mary':
+                    // Remove elements from nave bar
+                    report.removeChild();
+                    // Change the text of the output element
+                    document.getElementById('name').innerHTML = 'Hi' + userInput;
+                    break;
+                // Add additional cases as needed for other users
+                default:
+                    break;
+            }
+    
+        } else {
+            alert('else statement executed: error')
         }
-
     }
-}
-
-// add event listener to form submit button to validate user
-document.getElementById('name').addEventListener('li', changeElement);
+    
+    // add event listener to form submit button to validate user
+    document.getElementById('name').addEventListener('name', changeElement);
+    
+});
