@@ -8,16 +8,16 @@ function handleButtonClick() {
 
     async function loadUsers() {
         fetch('/Capstone Project/automobmechanic-app/js/users.json' + Date.now())
-        .then(response => response.json())
-        .then(data => {
-            users = data
-            console.log(users)
+            .then(response => response.json())
+            .then(data => {
+                users = data
+                console.log(users)
 
-        })
-        .catch(error => {
-            console.log('An error occured:', error);
-        }); 
-        
+            })
+            .catch(error => {
+                console.log('An error occured:', error);
+            });
+
     }
     loadUsers();
 };
@@ -43,7 +43,7 @@ function handleSubmit(event) {
         username: usernameInput,
         password: passwordInput
     }
-    handleButtonClick();    
+    handleButtonClick();
     validateUserInput(formData);
 }
 
@@ -95,3 +95,40 @@ function validateUserInput(formData) {
 
 // add event listener to form submit button to validate user
 document.getElementById('myForm').addEventListener('submit', handleSubmit);
+
+// Set the countdown duration (10 minutes)
+const countdownDuration = 10 * 60 * 1000; // 10 minutes in milliseconds
+
+// Get the current timestamp
+const startTime = new Date().getTime();
+
+// Calculate the end time by adding the countdown duration to the start time
+const endTime = startTime + countdownDuration;
+
+// Update the countdown every second
+const countdownInterval = setInterval(updateCountdown, 1000);
+
+function updateCountdown() {
+    // Get the current timestamp
+    const currentTime = new Date().getTime();
+
+    // Calculate the remaining time
+  const remainingTime = endTime - currentTime;
+
+    // Calculate minutes and seconds
+    const minutes = Math.floor(remainingTime / (1000 * 60));
+    const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+
+    // Display the countdown in the console or update the HTML element
+    document.getElementById('counter').innerHTML = minutes + ' minutes ' + seconds + ' seconds';
+
+    // Check if the countdown is finished
+    if (remainingTime <= 0) {
+        clearInterval(countdownInterval);
+        console.log('Countdown finished!');
+        // Perform any desired actions here after the countdown finishes
+    }
+}
+
+// add event listener to form submit button to validate user
+document.getElementById('counter').addEventListener('onclick', updateCountdown)
