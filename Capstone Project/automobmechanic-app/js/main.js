@@ -78,4 +78,19 @@ document.addEventListener('DOMContentLoaded', function () {
     if (username) {
         updateUserName(username);
     }
+
+    // Update navbar based on username 
+    const report = document.getElementById('reporting');
+    const service = document.getElementById('services')
+    const booking = document.getElementById('booking')
+    const login = document.getElementById('login')
+    if (username == 'admin') {
+        service.remove()
+        booking.remove()
+        login.remove()
+    } else {
+        report.remove()
+        login.remove()
+        
+    }
 });
