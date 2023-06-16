@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/booking.css">
     <script src="../js/main.js"></script>
     <title>Booking | AutoMob-Mechanic</title>
+    <script src="../js/booking.js"></script>
 </head>
 
 <body>
@@ -26,7 +27,7 @@
     </header>
     <main>
         <h2>Book Your Service</h2>
-        <form method="POST" action="./booking-success.html">
+        <form method="POST" action="../html/booking-success.html" id="booking-form">
             <div>
                 <label for="name">Name:</label>
                 <input type="text" id="name" placeholder="John Daub" required pattern="^[A-Za-z]{1,}[\s][A-Za-z]{1,}$">
@@ -91,7 +92,7 @@
                 <textarea id="address" cols="50" rows="4"></textarea>
             </div>
             <div>
-                <button type="submit">Book</button>
+                <button type="submit" id="book-button">Book</button>
             </div>
             <br><br>
         </form>
