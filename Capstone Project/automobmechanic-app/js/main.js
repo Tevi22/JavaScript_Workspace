@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let users;
 
     // Function to load users from JSON file
-    function loadUsers () {
+    function loadUsers() {
         return fetch('/Capstone Project/automobmechanic-app/js/users.json')
             .then(response => response.json())
             .then(data => {
@@ -53,9 +53,6 @@ document.addEventListener('DOMContentLoaded', function () {
             alert('Logged in successfully');
             location.assign('../html/home.html');
             updateUserName(matchedUser.name)
-            /*if (matchedUser.name == 'admin') {
-                document.getElementById('name').innerHTML = 'Admin'
-            }*/
         } else {
             // If the user input does not match any users in the JSON file
             alert('Invalid credentials: Please Try Again');
@@ -76,21 +73,41 @@ document.addEventListener('DOMContentLoaded', function () {
     // Update user name if already logged in
     const username = sessionStorage.getItem('username');
     if (username) {
-        updateUserName(username);
+        updateUserName('Hi ' + username.charAt(0).toUpperCase() + username.slice(1) + " |");
     }
 
     // Update navbar based on username 
-    const report = document.getElementById('reporting');
+    const report = document.getElementById('reports');
     const service = document.getElementById('services')
     const booking = document.getElementById('booking')
     const login = document.getElementById('login')
-    if (username == 'admin') {
-        service.remove()
-        booking.remove()
-        login.remove()
-    } else {
-        report.remove()
-        login.remove()
-        
+
+    switch (username) {
+        case 'admin':
+            service.remove()
+            booking.remove()
+            login.remove()
+            break;
+        case 'alex':
+        case 'mary':
+        case 'johnson':
+        case 'eliza':
+        case 'chris':
+            report.remove()
+            login.remove()
+            break;
+        default:
+            break;    
     }
+
+    // Logout user
+    const logout = document.getElementById('logout')
+    function signOut() {
+        sessionStorage.clear()
+        alert('Logout Successfully');
+        location.assign('../html/home.html')
+    }
+
+    logout.addEventListener('click', signOut);
+
 });
