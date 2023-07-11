@@ -7,3 +7,4 @@ function signOut() {
 }
 
 logout.addEventListener('click', signOut);
+
