@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function () {
             login.remove()
             break;
         default:
-            break;    
+            break;
     }
 
     // Logout user
