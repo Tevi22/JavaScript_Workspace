@@ -30,6 +30,7 @@ for (x = 1; x <= 5; x++) {
     char = "";
 }
 
+// Q.1
 let employee = {
     empId:'I1001',
     empName: {
@@ -42,6 +43,8 @@ let employee = {
 
 let {firstName: middleName, lastName} = employee.empName
 console.log(middleName) // undefined
+
+// Q.2
 
 let states = [];
 states.push(['Rihana',
