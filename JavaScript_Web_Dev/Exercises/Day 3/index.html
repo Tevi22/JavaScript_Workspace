@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./domErrorHandling.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="calculator">
+        <h2>Calculator</h2>
+        <label>
+            Operand 1: <input type="text" id="operand1">
+        </label>
+        <br>
+        <label>
+            Operand 2: <input type="text" id="operand2">
+        </label>
+        <br>
+        <label>
+            Operator
+            <input type="radio" name="operator" value="+" checked> +
+            <input type="radio" name="operator" value="-"> -
+            <input type="radio" name="operator" value="*"> *
+            <input type="radio" name="operator" value="/"> /
+        </label>
+        <br>
+        <button onclick="calculate()">Calculate</button>
+        <p id="error" class="error"></p>
+        <p id="result" class="result"></p>
+    </div>
+    
+</body>
+</html>
