@@ -1,0 +1,14 @@
+body {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    height: 100px;
+    margin: auto;
+    padding: 5px;
+}
+
+#btn {
+    background-color: aqua;
+    color: aliceblue;
+    border-radius: 5px;
+}

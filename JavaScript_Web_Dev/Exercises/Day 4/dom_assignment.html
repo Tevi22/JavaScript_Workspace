@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="input">
+        <label>
+            Enable
+        </label>
+        <input type="radio" id="enable" name="choice" onchange="validate()">
+        <label>
+            Disable
+        </label>
+        <input type="radio" id="disable" name="choice" onchange="validate()">
+    </div>
+    <div id="submit">
+        <button id="btn" disabled>Button</button>
+    </div>
+    <script>
+        let enable = document.getElementById('enable');
+        let disable = document.getElementById('disable');
+        let button = document.getElementById('btn');
+        function validate() {
+            if (enable.checked) {
+                button.disabled = false;
+            } else {
+                button.disabled = true;
+            }
+
+        }
+    </script>
+</body>
+
+</html>
