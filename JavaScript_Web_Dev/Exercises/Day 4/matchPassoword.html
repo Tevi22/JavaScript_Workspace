@@ -10,7 +10,7 @@
             display: flex;
             flex-direction: column;
             width: 200px;
-            height: 100px;
+            height: auto;
             margin: 10px;
             border-radius: 16px;
             padding: 10px;
@@ -28,6 +28,7 @@
             text-align: center;
             width: 75px;
             margin-left: 50px;
+            border-radius: 8px;
         }
 
         label {
@@ -40,9 +41,12 @@
 <body>
     <div id="container">
         <label>Password:</label>
-        <input type="text" name="password" id="password" placeholder="password">
+        <input type="text" name="password" id="password" placeholder="password" oninput="checkPasswordStrength()">
         <div id="strengthIndicator"></div>
-        <button id="btn" onclick="checkPasswordStrength()">Submit</button>
+        <label>Confrim Password:</label>
+        <input type="text" name="matchpassword" id="confrimpassword" placeholder="password">
+        <div id="matchedpassword" ></div>
+        <button id="btn" onclick="confirmPassword()">Submit</button>
     </div>
     <script>
         function checkPasswordStrength() {
@@ -53,18 +57,35 @@
       
             if (password.length < 8) {
               strengthIndicator.textContent = "Weak";
-              strengthIndicator.style.backgroundColor = "#FF3333";
+              strengthIndicator.style.color = "#FF3333";
             } else if (/^[a-zA-Z0-9]+$/.test(password)) {
               strengthIndicator.textContent = "Medium";
-              strengthIndicator.style.backgroundColor = "#FF9933";
+              strengthIndicator.style.color = "#FF9933";
             } else if (/^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^&*])/.test(password)) {
               strengthIndicator.textContent = "Strong";
-              strengthIndicator.style.backgroundColor = "#33CC33";
+              strengthIndicator.style.color = "#33CC33";
             } else {
               strengthIndicator.textContent = "Weak";
-              strengthIndicator.style.backgroundColor = "#FF3333";
+              strengthIndicator.style.color = "#FF3333";
             }
-          }
+        }
+
+        function confirmPassword() {
+            const passwordInput = document.getElementById("password");
+            const matchedPassword = document.getElementById("confrimpassword");
+            const confirmPassword = document.getElementById("matchedpassword");
+
+            const password = passwordInput.value;
+            const password1 = matchedPassword.value;
+
+            if (password == password1) {
+                confirmPassword.textContent = "Password matched";
+                confirmPassword.style.color = "#33CC33";
+            } else {
+                confirmPassword.textContent = "Password not matched";
+                confirmPassword.style.color = "#FF3333"
+            }
+        }
     </script>
 </body>
 </html>
