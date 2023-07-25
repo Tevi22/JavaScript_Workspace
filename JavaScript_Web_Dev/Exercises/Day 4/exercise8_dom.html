@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            align-content: center;
+        }
+
+        span {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <h1>Infy Online Gourmet Shop</h1>
+        <br>
+        <h2>Dine Booking</h2>
+        <br>
+        <br>
+        <label for="">Visitor Name:</label>
+        <input type="text" name="username" id="username">
+        <br>
+        <label for="">Number of menbers:</label>
+        <input type="number" name="number" id="number">
+        <br>
+        <label for="">Contact No:</label>
+        <input type="number" name="contact" id="contactNumber">
+        <br>
+        <label>Email:</label>
+        <input type="text" name="email" id="email">
+        <br>
+        <label for="">Type of Food:</label>
+        <input type="radio" name="food" id="food" checked="checked">South Indian
+        <input type="radio" name="food" id="food">North Indian
+        <input type="radio" name="food" id="food">Chinese
+        <input type="radio" name="food" id="food">Western
+        <br>
+        <label for="">Room Status</label>
+        <input type="checkbox" name="room" id="room" checked="checked">AC 
+        <input type="checkbox" name="room" id="room">Non-AC
+        <br>
+        <label for="">Venue</label>
+        <select name="venue" id="venue">
+            <option value="">--SELECT--</option>
+            <option value=""></option>
+            <option value=""></option>
+        </select>
+        <br>
+        <button>Book</button>
+        <button>Reset</button>
+        <br>
+        <span id="message"></span>
+        <br>
+        <span id="message1"></span>
+
+    </form>
+    <script>
+        let foodType = document.getElementById('message');
+        let roomStatus = document.getElementById('message1');
+
+        foodType.textContent = 'The deault value of Food Type is: South Indiana';
+        roomStatus.textContent = 'The default value of Room Status is: AC'
+    </script>
+    
+</body>
+</html>

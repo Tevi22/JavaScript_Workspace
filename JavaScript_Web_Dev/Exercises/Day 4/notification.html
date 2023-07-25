@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Notification</title>
+    <script>
+        function notifyMe() {
+            if (Notification.permission === "default") {
+                Notification.requestPermission().then(function (permission) {
+                    if (permission === "granted") {
+                        new Notification('Hello Welcome', { body: "Welcome to Notification API" });
+                    } else {
+                        alert('Notifications are blocked. Please allow notifications to see the message.');
+                    }
+                });
+            } else if (Notification.permission === "granted") {
+                new Notification('Hello Welcome', { body: "Welcome to Notification API" });
+            } else {
+                alert('Notifications are blocked. Please allow notifications to see the message.');
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <button onclick="notifyMe()">Notify me!</button>
+
+</body>
+
+</html>
