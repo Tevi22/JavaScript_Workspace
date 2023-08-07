@@ -4,8 +4,17 @@ html, body{
 }
 
 .navbar-brand{
-	font-weight: 500;
-	font-size:1.25rem;
+	background-color: rgb(71, 57, 82);
+	color: white;
+	columns: 8;
+	column-gap: 2;
+	opacity: 0.863;
+	font-weight: 300;
+	font-size:3.5rem;
+}
+
+h2 {
+	margin: 10px;
 }
 .paragraph{
 	font-style: italic;
