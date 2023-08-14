@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+}
+
+table {
+  margin-top: 60px;
+  margin-left: 85px;
+  margin-bottom: 30px;
+  width: 90%;
+
+  /* border-collapse: collapse; */
+}
+
+table tr {
+  padding: 5px, 5px;
+  border: none;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  border: none;
+}
+
+th {
+  background-color: rgb(51, 89, 151);
+  color: white;
+}
+
+.alt1 {
+  color: rgb(33, 68, 124);
+  background-color: rgb(152, 175, 212);
+}
+
+.alt2 {
+  background-color: rgb(194, 206, 224);
+  color: rgb(33, 68, 124);
+}
+
+.tag {
+  padding-right: 50px;
+  float: right;
+  color: rgb(33, 68, 124);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+}
+
+/* Include all the stylings to make table responsive */

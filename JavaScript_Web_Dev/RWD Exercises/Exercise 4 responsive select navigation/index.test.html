@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Your regular navigation styles for screens larger than 560px */
+    .nav {
+      display: flex;
+      justify-content: space-around;
+      background-color: #333;
+      color: white;
+      padding: 10px;
+    }
+
+    .nav-select {
+      display: none;
+    }
+
+    /* Styles for screens less than 560px */
+    @media (max-width: 560px) {
+      .nav {
+        display: none; /* Hide regular navigation */
+      }
+
+      /* Show the select box */
+      select.nav-select {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background-color: #333;
+        color: white;
+        border: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Regular navigation for screens larger than 560px -->
+<div class="nav">
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Contact</a>
+</div>
+
+<!-- Select box for navigation on screens less than 560px -->
+<select class="nav-select">
+  <option value="#">Home</option>
+  <option value="#">About</option>
+  <option value="#">Services</option>
+  <option value="#">Contact</option>
+</select>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+}
+
+iframe {
+  width: 94%;
+  height: 320px;
+  margin-left: 4%;
+  margin-right: 50px;
+  border: 2px solid white;
+}
+
+.bc {
+  margin-left: 7.5%;
+  margin-top: 4%;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.description {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 25px;
+  text-align: justify;
+  font-size: 13px;
+}
+
+.bread {
+  text-decoration: none;
+}
+
+.bread:hover {
+  border-bottom: 1px solid;
+}
+
+.inner {
+  margin-top: 2%;
+  width: 200%;
+  transition: margin 0.5s;
+}
+
+body {
+  width: 100%;
+}
+
+.btn {
+  float: right;
+  color: white;
+  background: rgb(33, 68, 124);
+  padding: 3px;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: rgb(24, 53, 100);
+}
+
+#toggle-1,
+#toggle-2 {
+  position: absolute;
+  left: -50px;
+}
+
+.col1 {
+  float: left;
+  width: 45%;
+  padding-left: 5%;
+}
+
+.col2 {
+  float: left;
+  padding-left: 10%;
+  width: 50%;
+}
+
+#toggle-1:checked ~ .inner {
+  margin-left: 0%;
+}
+
+#toggle-2:checked ~ .inner {
+  margin-left: -100%;
+}
+
+/* Include All the CSS required to make it responsive */

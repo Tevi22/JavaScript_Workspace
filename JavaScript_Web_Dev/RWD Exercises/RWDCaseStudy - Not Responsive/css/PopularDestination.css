@@ -1,0 +1,57 @@
+.container {
+  margin-left: 3%;
+  margin-top: 70px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+p {
+  text-align: center;
+  color: rgb(54, 54, 54);
+}
+
+img {
+  width: 94%;
+  height: 180px;
+  padding-left: 8px;
+  padding-top: 8px;
+  padding-right: 8px;
+}
+
+.description {
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.col {
+  height: 300px;
+  box-shadow: 1px 1px 3px 2px grey;
+  margin: 10px;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.col:hover {
+  box-shadow: 1px 1px 8px 5px grey;
+}
+
+.col1 {
+  width: 21%;
+  float: left;
+}
+
+.col2 {
+  width: 21%;
+  float: left;
+}
+
+.col3 {
+  width: 21%;
+  float: left;
+}
+
+.col4 {
+  float: left;
+  width: 21%;
+}
+
+/* Include all the stylings to make this page responsive */

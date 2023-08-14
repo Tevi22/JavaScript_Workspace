@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Breadcrumb container */
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      background-color: #f0f0f0;
+      padding: 10px;
+      font-size: 14px;
+    }
+
+    /* Breadcrumb item */
+    .breadcrumb-item {
+      margin-right: 10px;
+    }
+
+    /* Last breadcrumb item (without separator) */
+    .breadcrumb-item:last-child {
+      margin-right: 0;
+    }
+
+    /* Separator */
+    .breadcrumb-separator::before {
+      content: ">";
+      margin: 0 5px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+<div class="breadcrumb">
+  <div class="breadcrumb-item"><a href="#">Home</a></div>
+  <div class="breadcrumb-separator"></div>
+  <div class="breadcrumb-item"><a href="#">Products</a></div>
+  <div class="breadcrumb-separator"></div>
+  <div class="breadcrumb-item">Category</div>
+</div>
+
+</body>
+</html>
