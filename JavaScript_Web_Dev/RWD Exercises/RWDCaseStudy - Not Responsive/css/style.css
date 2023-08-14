@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  font-family: monospace;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: rgb(33, 68, 124);
+}
+
+.topnav a {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:first-child {
+  float: left;
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.topnav a:hover {
+  font-weight: 600;
+}
+
+.active {
+  font-weight: 600;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+/* Include the styling to make navbar responsive */
+
+@media screen and (max-width: 720px) {
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+
+  .topnav a.icon {
+   float: right;
+   display: block;
+  }
+
+}
+
+.topnav.responsive .icon {
+  position: relative;
+  right: 0;
+  top: 0;
+}
+
+
+
