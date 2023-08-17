@@ -83,23 +83,32 @@ body {
   .cont {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    
   }
   .col1 {
     width: 100%;
   }
 
   .col2 {
-    width: 55%;
+    width: 95%;
     text-align: justify;
-    margin-left: 150px;
+
+    
+  }
+
+  .head {
+    font-weight: bold;
   }
 }
 
-@media (min-width: 280px) and (max-width: 719px ) {
+@media screen and (min-width: 51px) and (max-width: 719px ) {
   
   .cont {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    align-items: center;
   }
   .col1 {
     width: 100%;
@@ -107,8 +116,11 @@ body {
 
   .col2 {
     width: 90%;
-    text-align: justify;
-    margin: 5px;
+    text-align: justify; 
+  }
+
+  .col2, p {
+    padding: 5px;
   }
 }
 

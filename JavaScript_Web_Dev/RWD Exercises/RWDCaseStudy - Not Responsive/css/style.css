@@ -39,6 +39,9 @@ body {
 /* Include the styling to make navbar responsive */
 
 @media screen and (max-width: 720px) {
+  .topnav {
+    width: 100%;
+  }
   .topnav a:not(:first-child) {
     display: none;
   }
@@ -50,11 +53,20 @@ body {
 
 }
 
-.topnav.responsive .icon {
+.topnav.responsive {
   position: relative;
+}
+
+.topnav.responsive .icon {
+  position: absolute;
   right: 0;
   top: 0;
 }
 
+.topnav.responsive a {
+  float: none;
+  display: block;
+  text-align: left;
+}
 
 

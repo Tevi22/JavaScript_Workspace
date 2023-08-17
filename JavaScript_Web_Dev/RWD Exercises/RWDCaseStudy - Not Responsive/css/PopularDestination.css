@@ -55,3 +55,33 @@ img {
 }
 
 /* Include all the stylings to make this page responsive */
+
+@media screen and (max-width: 720px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .col1 {
+    width: 50%;
+    height: auto;
+    
+  }
+  
+  .col2 {
+    width: 50%;
+    height: auto;
+  }
+  
+  .col3 {
+    width: 50%;
+    height: auto;
+  }
+  
+  .col4 {
+    width: 50%;
+    height: auto;
+  }
+}
+
