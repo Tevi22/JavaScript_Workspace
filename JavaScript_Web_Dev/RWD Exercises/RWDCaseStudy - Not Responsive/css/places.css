@@ -81,3 +81,16 @@ body {
 }
 
 /* Include All the CSS required to make it responsive */
+
+@media screen  and (min-width: 700px) {
+  .btn {
+    display: none;
+  }
+
+  .inner {
+    display: contents;
+  }
+
+  
+}
+
