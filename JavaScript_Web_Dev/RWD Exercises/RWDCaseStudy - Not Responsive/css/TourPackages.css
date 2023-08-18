@@ -49,3 +49,56 @@ th {
 }
 
 /* Include all the stylings to make table responsive */
+@media screen and (max-width: 720px) {
+  /* medium screen */
+  .cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+  }
+  .col1 {
+    width: 100%;
+  }
+
+  .col2 {
+    width: 95%;
+    text-align: justify;
+
+    
+  }
+
+  .head {
+    font-weight: bold;
+  }
+}
+
+@media screen and (min-width: 51px) and (max-width: 650px ) {
+  /* smaller screen */
+  table {
+    display:block;
+  }
+
+  th, td {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  th {
+    text-align: left;
+  }
+
+  .table-header {
+    display: none;
+  }
+
+  .dates {
+    display: none;
+  }
+
+  :nth-child(4) {
+    content: Mar-Jun;
+  }
+
+}
