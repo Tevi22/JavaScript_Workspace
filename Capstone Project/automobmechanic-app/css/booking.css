@@ -45,6 +45,24 @@ select{
     border:1px solid gray;
 }
 
+@media screen and (max-width: 720px) {
+
+    body{
+        width: auto;
+        height: auto;
+    }
+    main{
+        text-align: center;
+        margin: 0px;
+        width: 100%;
+    }
+
+    #btn:hover {
+        background-color: lightblue;
+        color: white;
+    }
+}
+
 
 
 

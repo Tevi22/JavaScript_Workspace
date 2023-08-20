@@ -15,7 +15,7 @@
     <header>
         <b><a href="./home.html">AutoMob-Mechanic</a></b>
         <nav>
-            <ul id="navbar">
+            <ul class="topnav" id="navbar">
                 <li id="name"></li>
                 <li id="home" class="active"><a href="./home.html"> Home | </a></li>
                 <li id="login" class=""><a href="./login.html">Login |</a></li>
@@ -29,47 +29,43 @@
         </nav>
     </header>
     <main>
+        <h2>Car Repair and Service</h2>
+        <p>
+            Our representatives are professionaly trained and skilled with latest and futursitic techniques to
+            provide a best quality service.
+        </p>
+        <p>
+            At AutoMob-Mechanic, we provide a high class service to the customers for their happy and memorable
+            driving experience.
+        </p>
         <section>
-            <h2>Car Repair and Service</h2>
-            <p>
-                Our representatives are professionaly trained and skilled with latest and futursitic techniques to
-                provide a best quality service.
-            </p>
-            <p>
-                At AutoMob-Mechanic, we provide a high class service to the customers for their happy and memorable
-                driving experience.
-            </p>
-            <table>
-                <tr>
-                    <td >
-                        <h3>Preventive Maintenance Service</h3>
-                        <img src="../images/shutterstock_330500969.jpg" width="200" height="125">
-                        <p>Periodically check and keep your car running.</p>
-                        <em>Offer: 20%</em><br><br>
-                        <button><a id="prevent" >More Details</a></button>
-                        <br><br>
-                    </td>
-                    <td>
-                        <h3>Body Repair Service</h3>
-                        <img src="../images/shutterstock_277260179.jpg" width="200" height="125"><br>
-                        <p>Full chasis body repair provided by the experts.</p>
-                        <em>Offer: 10%</em><br><br>
-                        <button><a id="body-repair">More Details</a></button>
-                        <br><br>
-                    </td>
-                    <td>
-                        <h3>Car Care Service</h3>
-                        <img src="../images/shutterstock_1665024397.jpg" width="200" height="125">
-                        <p>Get your car sparkling clean in just minutes.</p>
-                        <em>Offer: 15%</em><br><br>
-                        <button><a id="car-care">More Details</a></button>
-                        <br><br>
-                    </td>
-                </tr>
-            </table>
-            <div>**Offer ends in: <span id="timmer"></span></div>
-            <script src="../js/countdown.js"></script>
+            <div class='offerings'>
+                <h3>Preventive Maintenance Service</h3>
+                <img src="../images/shutterstock_330500969.jpg" width="200" height="125">
+                <p>Periodically check and keep your car running.</p>
+                <em>Offer: 20%    <span class="countdown" id="timmer">**Offer ends in:</span></em><br><br>
+                <button><a id="prevent">More Details</a></button>
+                <br><br>
+            </div>
+            <div class='offerings'>
+                <h3>Body Repair Service</h3>
+                <img src="../images/shutterstock_277260179.jpg" width="200" height="125"><br>
+                <p>Full chasis body repair provided by the experts.</p>
+                <em>Offer: 10%   <span class="countdown" id="timmer">**Offer ends in:</span></em><br><br>
+                <button><a id="body-repair">More Details</a></button>
+                <br><br>
+            </div>
+            <div class='offerings'>
+                <h3>Car Care Service</h3>
+                <img src="../images/shutterstock_1665024397.jpg" width="200" height="125">
+                <p>Get your car sparkling clean in just minutes.</p>
+                <em>Offer: 15%   <span class="timmer" id="timmer">**Offer ends in:</span></em><br><br>
+                <button><a id="car-care">More Details</a></button>
+                <br><br>
+            </div>
         </section>
+        <div class="timmer">**Offer ends in: <span id="timmer"></span></div>
+        <script src="../js/countdotdown.js"></script>
     </main>
     <footer>
         <span>Copyright &copy; 2020 AutoMob-Mechanic.</span>&nbsp;

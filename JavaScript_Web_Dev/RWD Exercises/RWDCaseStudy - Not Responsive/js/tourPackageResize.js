@@ -33,7 +33,7 @@ function updateBestTimeContent() {
         isSmallScreen = true;
 
     } else if(screenWidth > 650 && isSmallScreen) {
-        //When screen size is not small
+        //When screen size is normal
         date1.innerHTML = '&check;'
         date2.innerHTML = ''
         date3.innerHTML = '&check;'

@@ -25,6 +25,37 @@
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: cornflowerblue;
+    background-color: rgb(70, 117, 204);
     color: white;
+  }
+
+  @media screen and (min-width: 51px) and (max-width: 650px ) {
+    /* smaller screen */
+    main {
+      width: 100%;
+      align-items: center;
+    }
+
+    table {
+      display:block;
+    }
+  
+    th, td {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  
+    th {
+      text-align: left;
+    }
+  
+    .table-header {
+      display: none;
+    }
+  
+    .dates {
+      display: none;
+    }
+  
   }

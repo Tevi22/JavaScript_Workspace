@@ -44,4 +44,48 @@ a {
     display: none;
 }
 
+@media screen and (max-width: 720px) {
+    tr {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 
+    td {
+        text-align: center;
+    }
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    ul {
+       text-align: center;
+    }
+
+    li:hover {
+        text-decoration: wavy;
+    }
+
+    .photo{
+        float: inline-start;
+    }
+
+    button {
+        margin-bottom: 20px;
+        
+    }
+
+    button:hover {
+        background-color: lightblue;
+        
+    }
+
+    button:hover a{
+        color: black;
+    }
+
+}

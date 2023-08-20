@@ -24,4 +24,13 @@ window.onload = function () {
         booking.addEventListener('click', handleBooking)
     }
 
-}  
+}
+
+function toggleNav() {
+    const navbar = document.getElementById('navbar');
+    if (navbar.className === 'topnav') {
+        navbar.className += ' responsive';
+    } else {
+        navbar.className = 'topnav';
+    }
+}
