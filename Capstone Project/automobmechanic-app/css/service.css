@@ -1,8 +1,29 @@
-main{
+main {
     margin-left: 50px;
     margin-right: 60px;
     margin-top: 27px;
+}
+section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     
+}
+
+.offerings {
+    border: 2px solid black;
+    padding: 10px;
+}
+
+.offerings:hover {
+    box-shadow: 2px 2px 2px 2px black;
+}
+
+button:hover {
+    background-color: gray;
+}
+a:hover {
+    color: black;
 }
 
 em {
@@ -10,16 +31,23 @@ em {
 }
 
 .timmer {
-    display: none;
+    display: inline;
+    color: red;
 }
 
 
 
 @media screen and (min-width: 51px) and (max-width: 650px) {
-    main {
+    section {
         display: flexbox;
         flex-direction: column;
         margin: 20px;
+    }
+
+    main {
+        margin-left: 50px;
+        margin-right: 60px;
+        margin-top: 27px;
     }
 
     .offerings {
@@ -32,8 +60,8 @@ em {
     }
 
     .timmer {
-        display: inline;
-        color: red;
+        display: none;
+        
     }
 
 }
