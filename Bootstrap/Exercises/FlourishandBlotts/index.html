@@ -1,13 +1,142 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Flourish and Blotts</title>
-    <link rel="stylesheet" href="./css/bootstrap.css">
-    <link rel="stylesheet" href="./css/styles.css">
-    <script type="text/javascript" src="./js/jquery.min.js"></script>
-    <script type="text/javascript" src="./js/bootstrap.js"></script>
-  </head>
-  <body>
-    <!-- Implement the Florish and Blotts exercises here -->
-  </body>
+
+<head>
+  <title>Flourish and Blotts</title>
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script type="text/javascript" src="./js/jquery.min.js"></script>
+  <script type="text/javascript" src="./js/bootstrap.js"></script>
+</head>
+<style>
+ .navbar-brand {
+    color: black;
+    font-weight: bold;
+  }
+
+  nav {
+    background-color: white;
+    list-style-type: none;
+    width: 100%;
+    height: auto;
+  }
+
+  .nav-toggler {
+    color: black;
+  }
+
+  .nav-link {
+    color: black;
+  }
+
+  tr,
+  th,
+  td {
+    border: white 2px solid;
+    padding: 5px;
+    color: white;
+  }
+
+
+  form {
+    color: black;
+    padding: 15px;
+    height: 100%;
+    width: 100%;
+  }
+
+  .sign-up {  
+    background-color: blue;
+    color: white;
+    width: 100%;
+  }
+</style>
+
+<body>
+  <!-- Implement the Florish and Blotts exercises here -->
+  <nav class="navbar navbar-expand-md bg-light navbar-light">
+    <a class="navbar-brand" href="#">Florish and Blotts</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav" id="navbar">
+        <li class="nav-item">
+          <a class="nav-link" href="#">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Trending</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Our Collection</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" >Already verified? Login here</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <br><br>
+  <div class="container"
+    style="background-color: white; color:black; padding: 10px; text-align:center">
+    <h1 class="display-1">Flourish and Blotts</h1><br>
+    <h3>At FLORISH AND BLOTTS we dont just sell books, we sell an experiance. In the name of Merlin's beard
+      there is no book that you cannot find here. Witches and wizards, this is your one stop destination for every book
+      there.
+      Even <span style="color: yellow;">"The Invisible Book of Invisibility".</span> Visit us at <span
+        style="color: green;">North Side, Diagon Alley</span> today!
+    </h3><br>
+  </div><br><br>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-7 gy-6">
+        <h3 style="font-weight: bold; color: white;" >Popular Trending Books:</h3>
+        <table style="border: white 2px solid;">
+          <tr>
+            <th>Book Cover</th>
+            <th>Book Title</th>
+            <th>Author</th>
+            <th>Cost</th>
+          </tr>
+          <tr>
+            <td><img src="./images/book1.jpg"></td>
+            <td>The Lies and Life of Albus Dumbledore</td>
+            <td>Rita Skeeter</td>
+            <td>10 <span style="background-color: aqua; padding:2px;">Galleons</span></td>
+          </tr>
+          <tr>
+            <td><img src="./images/book2.jpg" style="width: 75%;"></td>
+            <td>Holidays with Hags</td>
+            <td>Glideroy Lockhart</td>
+            <td>8 <span style="background-color: aqua; padding:2px;">Galleons</span></td>
+          </tr>
+          <tr>
+            <td><img src="./images/book3.jpg"></td>
+            <td>The Monster book of Monsters</td>
+            <td>Edwarus Lima</td>
+            <td>15 <span style="background-color: aqua; padding:2px;">Galleons</span></td>
+          </tr>
+        </table>
+      </div><br><br>
+      <div class="col-lg-4" style="margin-top:10px;">
+        <form action="" style="background-color: white;">
+          <h4 style="background-color: whitesmoke; color:black;">Verify you are "Magical"</h4>
+          <label for="Email">Email</label><br>
+          <input type="text" name="email"><br>
+          <label for="">Password</label><br>
+          <input type="text"><br>
+          <label for="">Confirm Password</label><br>
+          <input type="text"><br>
+          <br><input type="checkbox" name="" id=""> I am Not a muggle
+          <br><br>
+          <button class="sign-up">Sign Up</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</body>
+
 </html>
