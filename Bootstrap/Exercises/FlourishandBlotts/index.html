@@ -29,18 +29,17 @@
   .nav-link {
     color: black;
   }
+
+  p {
+    font-size: 20px;
+  }
   
   tr {
     color: white;
   }
 
 
-  form {
-    color: black;
-    padding: 15px;
-    height: 100%;
-    width: 100%;
-  }
+
 
  
 </style>
@@ -64,7 +63,7 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Our Collection</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item mx-2">
           <a class="nav-link" class="text-right" href="#">Already verified? Login here</a>
         </li>
       </ul>
@@ -74,12 +73,12 @@
   <div class="container"
     style="background-color: white; color:black; padding: 10px; text-align:center">
     <h1 class="display-1">Flourish and Blotts</h1><br>
-    <h3 class="text-justify">At FLORISH AND BLOTTS we dont just sell books, we sell an experiance. In the name of Merlin's beard
+    <p class="text-justify">At FLORISH AND BLOTTS we dont just sell books, we sell an experiance. In the name of Merlin's beard
       there is no book that you cannot find here. Witches and wizards, this is your one stop destination for every book
       there.
       Even <span class="text-warning">"The Invisible Book of Invisibility".</span> Visit us at <span
         class="text-success">North Side, Diagon Alley</span> today!
-    </h3><br>
+    </p><br>
   </div><br><br>
   <div class="container">
     <div class="row">
@@ -112,20 +111,25 @@
           </tr>
         </table>
       </div><br><br>
-      <div class="col-lg-4" style="margin-top:10px;">
-        <form action="" style="background-color: white;">
-          <h4>Verify you are "Magical"</h4>
-          <hr>
-          <label for="Email">Email</label><br>
+      <div class="col-lg-5" style="margin-top:10px;">
+        <div class="card">
+          <div class="card-header">
+            <h4>Verify you are "Magical"</h4>
+          </div>
+          <div class="card-body">
+            <label for="Email">Email</label><br>
           <input type="text" name="email"><br>
           <label for="">Password</label><br>
           <input type="text"><br>
           <label for="">Confirm Password</label><br>
           <input type="text"><br>
           <br><input type="checkbox" name="" id=""> I am Not a muggle
-          <br><hr>
-          <button class="btn btn-primary btn-block">Sign Up</button>
-        </form>
+          <br>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-primary btn-block">Sign Up</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
