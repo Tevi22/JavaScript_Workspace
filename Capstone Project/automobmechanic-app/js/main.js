@@ -78,34 +78,41 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Update navbar based on username 
     const report = document.getElementById('reports');
-    const service = document.getElementById('services')
-    const booking = document.getElementById('booking')
-    const login = document.getElementById('login')
+    const service = document.getElementById('services');
+    const booking = document.getElementById('booking');
+    const login = document.getElementById('login');
+    const logout = document.getElementById('logout');
+
+    // Hide logout button when no user is logged in
+    logout.style.display = 'none';
+    
+    // User menu item changes based on which user is logged-in
 
     switch (username) {
         case 'admin':
-            service.remove()
-            booking.remove()
-            login.remove()
+            service.remove();
+            booking.remove();
+            login.remove();
+            logout.style.display = '';
             break;
         case 'alex':
         case 'mary':
         case 'johnson':
         case 'eliza':
         case 'chris':
-            report.remove()
-            login.remove()
+            report.remove();
+            login.remove();
+            logout.style.display = '';
             break;
         default:
             break;
     }
 
     // Logout user
-    const logout = document.getElementById('logout')
     function signOut() {
-        sessionStorage.clear()
+        sessionStorage.clear();
         alert('Logout Successfully');
-        location.assign('../html/home.html')
+        location.assign('../html/home.html');
     }
 
     logout.addEventListener('click', signOut);

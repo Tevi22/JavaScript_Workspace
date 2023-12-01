@@ -21,6 +21,28 @@ input[type="button"] {
     border: none;
 }
 
+button,
+input[type="submit"] {
+    padding: 10px 20px 10px 20px;
+    background-color: rgb(61, 126, 248);
+    color: white;
+    border: none;
+}
+
+button,
+input[type="submit"]:hover {
+    background-color: grey;
+    color: black;
+}
+
+button:hover{
+    background-color: grey;
+}
+
+#explore:hover {
+    color: black;
+}
+
 footer {
     padding: 10px;
     text-align: center;
@@ -36,7 +58,7 @@ footer {
 header {
     background-color: cornflowerblue;
     color: white;
-    height: 40px;
+    height: auto;
     padding: 10px;
 }
 
@@ -54,6 +76,13 @@ header {
     float: none;
     display: block;
     text-align: left;
+}
+
+.nav-item:hover{
+    color: black;
+    font-weight: bold;
+    transition: font-weight 0.3s;
+    
 }
 
 
@@ -79,6 +108,7 @@ a {
 .hide-item {
     display: none;
 }
+
 
 
 @media screen and (max-width: 720px) {
